@@ -6,3 +6,6 @@
 
 # Local secrets
 /secrets/
+
+# Nested project repos
+/career-gps/
