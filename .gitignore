@@ -1,0 +1,8 @@
+# Ignore sensitive data
+.env*
+
+# Ignore local config
+!.env.example
+
+# Local secrets
+/secrets/
