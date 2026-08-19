@@ -21,7 +21,6 @@ personalized, evidence-based roadmap for what to learn and do next.*
 ## 📚 Repositories
 
 - **[career-gps](https://github.com/Team-Compass-2026/career-gps)** — the product codebase (Next.js + Neon + Better Auth)
-- **[.github](https://github.com/Team-Compass-2026/.github)** — this org repo: shared context, issue/PR templates, workflows
 
 ## 🧑‍💻 The problem we're solving
 
