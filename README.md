@@ -48,6 +48,6 @@ git clone https://github.com/Team-Compass-2026/.github.git
 # Clone the product repo
 git clone https://github.com/Team-Compass-2026/career-gps.git
 cd career-gps
-npm install
-npm run dev
+bun install
+bun run dev
 ```
