@@ -12,6 +12,8 @@ Journey: **Confusion → Understanding → Planning → Learning → Action → 
 
 One-line pitch: *Helps young people turn overwhelming career information into a personalized, evidence-based roadmap for what to learn and do next.*
 
+Tagline: **Stop guessing. Start building your career.** · *Your GPS for career decisions.*
+
 ## Repositories
 
 - **[career-gps](https://github.com/Team-Compass-2026/career-gps)** — the product codebase (Next.js + Prisma + Hono, Better Auth). `README.md` there describes the product and app setup.
@@ -21,6 +23,8 @@ One-line pitch: *Helps young people turn overwhelming career information into a 
 
 The `context/` folder holds the canonical project documentation:
 
+- `context/product-spec.md` — the full Career GPS master specification (problem, solution, MVP, data model, AI/RAG, business model, pitch)
+- `context/prototype-spec.md` — high-fidelity clickable prototype brief (6 page layouts: Landing → Assessment → Pathway → Next Step → Mentor → Progress)
 - `context/project-setup.md` — onboarding guide, version/lifecycle management, daily workflow
 - `context/project-overview.md` — product definition, goals, features, scope
 - `context/architecture.md` — system structure, storage model, invariants

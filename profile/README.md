@@ -2,21 +2,24 @@
 
 **DEEP Hackathon 2026 · Track T2 — Education Equity**
 
-We build **Career GPS** — a personalised career companion that helps young people
-and university students move from career uncertainty to career action.
+We build **Career GPS** — an AI-powered career navigation platform that helps
+young people and university students move from career uncertainty to career
+action.
 
-> *"We stay with you until you do it."*
+> *"Stop guessing. Start building your career."* — *Your GPS for career
+> decisions.*
 
 ## 🎯 What we're building
 
-Career GPS turns scattered career information into a clear, personalised,
+Career GPS turns scattered career information into a clear, personalized,
 actionable roadmap. It combines a structured career→skills→resources dataset,
-user profiles, and skill-gap analysis.
+user profiles, and skill-gap analysis — plus progress tracking, personalized
+roadmaps, and (in future) human mentoring.
 
 **Journey:** Confusion → Understanding → Planning → Learning → Action → Career Readiness
 
-**One-line pitch:** *Helps young people turn overwhelming career information into a
-personalized, evidence-based roadmap for what to learn and do next.*
+**One-line pitch:** *Helps young people turn overwhelming career information into
+a personalized, evidence-based roadmap for what to learn and do next.*
 
 ## 📚 Repositories
 
@@ -28,8 +31,10 @@ personalized, evidence-based roadmap for what to learn and do next.*
 - **44%** of Myanmar youth are unsure about their future
 - **80%** skills mismatch between education and the job market
 
-We're making career guidance accessible, structured, and action-oriented — no
-more generic advice and conflicting pathways.
+Young people have more career information than ever, but information overload
+creates confusion instead of clarity. We're making career guidance personal,
+structured, and action-oriented — no more generic advice and conflicting
+pathways.
 
 ## 🤝 Get involved
 

@@ -1,5 +1,10 @@
 # Architecture Context — Career GPS
 
+> Product ground truth: `context/product-spec.md` (master spec) and
+> `context/project-overview.md`. **MVP = structured, curated data. Full RAG
+> (ingest/embed/retrieve over the knowledge base) is a documented future
+> direction (`product-spec.md` §18), not an MVP build item.**
+
 ## Stack
 
 | Layer | Technology | Role |
@@ -12,7 +17,7 @@
 | Database | **Neon** PostgreSQL + Prisma | Users, profiles, careers, skills, roadmaps, chat |
 | Vectors | **pgvector** on Neon | Structured data store |
 | Search | Postgres FTS + hybrid vector | Keyword + semantic |
-| AI | Vercel AI SDK + **OpenAI** (`gpt-4o-mini` + `text-embedding-3-small`) | Coach + roadmap + embeddings |
+| AI | `lib/ai/provider.ts` (provider‑agnostic abstraction: pcore‑brain / openai‑compatible) + env‑driven switching | Model‑selectable via `AI_BRAIN_MODEL_POOL` / `AI_BRAIN_MODEL`; test endpoint `app/api/ai/chat/route.ts` |
 | Hosting | **Vercel** + Neon | Hackathon deploy |
 
 Template reference: `docs/architecture/21-next-hono-prisma-query.md`
@@ -79,5 +84,6 @@ LLM explains and personalizes; structured engines own deterministic comparisons.
 4. Better Auth session required for profile/roadmap/chat mutations.  
 5. Roadmap/chat tools propose; user confirms destructive pathway changes.  
 6. No secrets in git.  
-7. **Do not scaffold/build the app until product owner says build** — docs +
-   skills first (current phase).
+7. **Do not scaffold/build the app until product owner says build** — shell +
+   design-system groundwork is done; core MVP build (onboarding → recommend →
+   gaps → roadmap → coach → progress) waits for explicit **build**.
