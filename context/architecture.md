@@ -36,7 +36,7 @@ data model with Supabase Auth, PostGIS and Realtime.
 ## System Boundaries
 
 - `app/` — citizen routes: `/`, `/home`, `/report`, `/map`, `/alerts`,
-  `/profile`, `/sign-in`, `/sign-up`, `/design-system`
+  `/profile`, `/sign-in`, `/sign-up`
 - `app/(org)/dashboard` — organization WASH Intelligence dashboard
 - `app/api/[[...route]]/` — Hono app (`route.ts` + `reports.ts`); Better Auth
   at `app/api/auth/[...all]/`

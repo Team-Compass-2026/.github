@@ -41,8 +41,7 @@
 - **Page wiring** (`dd981aa`, parallel subagents): Landing + Map, Report form +
   Alerts, Home + Profile + Dashboard all read from `lib/queries.ts` /
   `/api/reports`. `/profile` is server-dynamic (auth session); rest static.
-- **Design system**: `docs/design-system.md` (canonical), live preview at
-  `/design-system`, fonts Space Grotesk / DM Sans / Geist Mono, clean & airy
+- **Design system**: `docs/design-system.md` (canonical), fonts Space Grotesk / DM Sans / Geist Mono, clean & airy
   tokens, **4-level risk scale** adopted app-wide (CRITICAL 85–100 `#b91c1c`,
   HIGH 67–84 `#dc2626`, MODERATE 34–66 `#d97706`, LOW 0–33 `#16a34a`).
 - **Lovable prompts** (`cf76e2a`): all 7 page prompts updated to the 4-level
