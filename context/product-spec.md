@@ -30,6 +30,10 @@ temporally, can reveal patterns before they become crises.
 
 **Core promise:** *See the risk. Share the signal. Protect the community.*
 
+**Brand descriptor:** *Turning community observations into early warnings for waterborne-disease risk*
+
+**Brand mark:** WATERWATCH (stylized/hero contexts)
+
 **Positioning:** *Myanmar's community WASH intelligence layer.*
 
 **Brand idea:** *We are the information bridge between people who observe

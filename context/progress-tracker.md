@@ -20,6 +20,10 @@
 - Complete the citizen verify flow (Confirm/Dispute) against
   `/api/reports/[id]/verify`
 
+## Completed (WaterWatch brand identity sync)
+
+- **Brand identity sync** across six-file context: added brand descriptor (*Turning community observations into early warnings for waterborne-disease risk*) and WATERWATCH (all-caps) brand mark for stylized/hero contexts. Parent repo commit `docs(context): sync WaterWatch brand descriptor and WATERWATCH brand mark`; app repo commit `chore(app): sync WaterWatch brand descriptor in metadata, manifest, README`.
+
 ## Completed (WaterWatch pivot — stack + design system)
 
 - **App repo live** (`Team-Compass-2026/waterwatch`, pushed through commit
@@ -101,3 +105,5 @@
   so the repo builds without a generate step.
 - Remaining before live demo: Neon provisioning + env + seed; optional Lovable
   design-system library build.
+- Brand identity sync (descriptor + WATERWATCH brand mark) committed across
+  parent repo context files and waterwatch app metadata/manifest/README.

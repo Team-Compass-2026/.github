@@ -6,6 +6,8 @@
 
 - **Product name:** WaterWatch (hero-level on marketing)
 - **Tagline:** See the risk. Share the signal. Protect the community.
+- **Brand descriptor:** Turning community observations into early warnings for waterborne-disease risk
+- **Brand mark:** WATERWATCH (hero/logo contexts)
 - **Short tagline:** Myanmar's community WASH intelligence layer.
 - **Theme:** Community Early Warning · Neighborhood watch for water
 - **Visual language:** Community → Signal → Clarity → Early Warning → Safety → Trust

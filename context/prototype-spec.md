@@ -166,6 +166,7 @@ Problem
 
 **Hero — Left**
 - Headline: *See the risk. Share the signal. Protect the community.*
+- Brand descriptor: *Turning community observations into early warnings for waterborne-disease risk*
 - Subheadline: *WaterWatch turns local observations about water and sanitation
   into early warnings for your neighborhood.*
 - Primary CTA: **Report a Problem**

@@ -13,6 +13,8 @@ alarming.
 - Team Compass🧭 secondary (about / footer)
 - Primary tagline: **See the risk. Share the signal. Protect the community.**
 - Short tagline: **Myanmar's community WASH intelligence layer.**
+- Brand descriptor: *Turning community observations into early warnings for waterborne-disease risk*
+- Brand mark: **WATERWATCH** (stylized/hero)
 
 ## Theme — Community Early Warning
 

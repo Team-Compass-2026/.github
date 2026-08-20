@@ -5,6 +5,8 @@
 > **Brand:** WaterWatch · Primary tagline: *See the risk. Share the signal.
 > Protect the community.* · Short: *Myanmar's community WASH intelligence
 > layer.*
+> Descriptor: *Turning community observations into early warnings for waterborne-disease risk*
+> Brand mark: **WATERWATCH**
 >
 > Canonical full spec: `context/product-spec.md`. Prototype development brief:
 > `context/prototype-spec.md`. Implementation specs: `context/specs/`.
