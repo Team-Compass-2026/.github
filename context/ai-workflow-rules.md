@@ -2,8 +2,9 @@
 
 ## Approach
 
-Spec-driven against six-file context + `docs/product/`. Do not invent report
-categories, townships, or scoring rules outside the curated product design.
+Spec-driven against six-file context (`context/*`) + `waterwatch/docs/`. Do not
+invent report categories, townships, or scoring rules outside the curated
+product design.
 
 **Current mandate: improve docs and skills only — do not build/scaffold the app
 until the user explicitly asks.**
@@ -26,7 +27,7 @@ dashboard.
 | Reports / verifications | `architecture.md` storage + RLS |
 | Risk score / alerts | `architecture.md` risk engine |
 | Map / geospatial | PostGIS + Mapbox/Google Maps |
-| New report types / areas | `product-spec.md` §6 + `data/README.md` |
+| New report types / areas | `context/product-spec.md` §6 + `context/specs/` |
 
 ## Verification (when building)
 
