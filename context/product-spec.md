@@ -918,8 +918,7 @@ clinical UI.
 # 36. Theme
 
 Support light mode (primary for citizens outdoors) and dark mode (dashboards).
-Thematic colors: **water blues** for the brand, **amber** for moderate risk,
-**red** for high risk, **green** for low risk.
+Navy-dominant palette: **Deep Navy `#123B5D`** for primary (brand lead), **Water Blue `#2F80ED`** for secondary (links, map pins), **Coral Red `#EB5757`** for destructive/alerts (risk-only). **Blue dominates. Red only for risk/alerts — never a major brand color.** Fonts: Space Grotesk (headings) / DM Sans (body) / Geist Mono (data only). Visual style: Google Maps × WHO dashboard × modern startup — rounded cards, thin borders, whitespace, simple line icons, map visuals, minimal gradients. Avoid: illustrations, cartoonish graphics, too many colors, dense paragraphs, stock photos. Mirror the Next.js app's design exactly.
 
 ---
 

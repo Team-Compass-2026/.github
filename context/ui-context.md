@@ -67,94 +67,108 @@ black. Suitable for: Organization dashboard, hotspot drill-downs, trends.
 
 ## Color System — WaterWatch Palette
 
+**Navy-dominant. Blue leads. Red only for risk/alerts — never a major brand color.**
+Fonts: Space Grotesk (headings) / DM Sans (body) / Geist Mono (data only).
+Visual style: Google Maps × WHO dashboard × modern startup — rounded cards, thin borders, whitespace, simple line icons, map visuals, small data-viz, minimal gradients.
+Avoid: illustrations, cartoonish graphics, too many colors, dense paragraphs, stock photos.
+
 Light theme:
 ```
-background: '#F8FAFC'
+background: '#F7F9FA'              /* Off-white */
 surface: '#FFFFFF'
-surface-muted: '#F1F5F9'
-surface-subtle: '#F8FAFC'
-surface-hover: '#F1F5F9'
+surface-muted: '#EEF2F5'
+surface-subtle: '#F7F9FA'
+surface-hover: '#EEF2F5'
 
-text-primary: '#0F172A'
+text-primary: '#1F2933'            /* Dark Charcoal */
 text-secondary: '#475569'
 text-muted: '#64748B'
 text-disabled: '#94A3B8'
 
-border: '#E2E8F0'
+border: '#E3E8EE'
 border-strong: '#CBD5E1'
 
-primary: '#0284C7'          /* Water Blue */
-primary-hover: '#0369A1'
-primary-active: '#075985'
-primary-soft: '#E0F2FE'
-primary-container: '#BAE6FD'
+primary: '#123B5D'                 /* Deep Navy — brand lead */
+primary-hover: '#0F3150'
+primary-active: '#0B2741'
+primary-soft: '#E3EBF3'
 on-primary: '#FFFFFF'
 
-secondary: '#0F172A'
+secondary: '#2F80ED'               /* Water Blue — links, map pins */
+secondary-hover: '#2B74D6'
+secondary-active: '#2565BA'
+secondary-soft: '#EAF2FE'
+secondary-container: '#D6E6FB'
 on-secondary: '#FFFFFF'
 
-success / low-risk: '#16A34A'
-success-soft: '#DCFCE7'
-on-success: '#052E16'
+destructive: '#EB5757'             /* Coral Red — risk/alerts ONLY */
+destructive-soft: '#FDEBEB'
 
-warning / moderate-risk: '#F59E0B'
+success: '#27AE60'
+success-soft: '#E6F7EE'
+
+warning / moderate-risk: '#D97706'
 warning-soft: '#FEF3C7'
-on-warning: '#451A03'
 
 danger / high-risk: '#DC2626'
 danger-soft: '#FEE2E2'
-on-danger: '#450A0A'
 
-water: '#0EA5E9'
-water-soft: '#E0F2FE'
+critical: '#B91C1C'
+critical-soft: '#FECACA'
 
-inverse-surface: '#0F172A'
-inverse-text: '#F8FAFC'
+ring: '#2F80ED'
+input: '#CBD5E1'
+
+inverse-surface: '#1F2933'
+inverse-text: '#F7F9FA'
 ```
 
 DARK THEME:
 ```
-background: '#0B1120'
-surface: '#111827'
-surface-muted: '#172033'
-surface-subtle: '#0F172A'
-surface-hover: '#1E293B'
+background: '#0F1B26'
+surface: '#152230'
+surface-muted: '#1B2A3A'
+surface-subtle: '#0F1B26'
+surface-hover: '#233445'
 
-text-primary: '#F8FAFC'
+text-primary: '#E8EFF5'
 text-secondary: '#CBD5E1'
-text-muted: '#94A3B8'
+text-muted: '#8FA0B0'
 text-disabled: '#64748B'
 
-border: '#263449'
+border: '#233445'
 border-strong: '#334155'
 
-primary: '#38BDF8'          /* Water Blue - dark */
-primary-hover: '#7DD3FC'
-primary-active: '#0EA5E9'
-primary-soft: '#0C4A6E'
-primary-container: '#075985'
-on-primary: '#082F49'
+primary: '#2F80ED'                 /* Water Blue — dark mode */
+primary-hover: '#2B74D6'
+primary-active: '#2565BA'
+primary-soft: '#1B2A3A'
+on-primary: '#FFFFFF'
 
-secondary: '#F8FAFC'
-on-secondary: '#0F172A'
+secondary: '#123B5D'               /* Navy — dark mode secondary */
+secondary-hover: '#0F3150'
+on-secondary: '#FFFFFF'
 
-success / low-risk: '#4ADE80'
+destructive: '#EB5757'
+destructive-soft: '#3D1515'
+
+success: '#4ADE80'
 success-soft: '#14532D'
-on-success: '#052E16'
 
 warning / moderate-risk: '#FBBF24'
 warning-soft: '#451A03'
-on-warning: '#FFFBEB'
 
 danger / high-risk: '#F87171'
 danger-soft: '#450A0A'
-on-danger: '#FFFBEB'
 
-water: '#38BDF8'
-water-soft: '#0C4A6E'
+critical: '#EF4444'
+critical-soft: '#7F1D1D'
 
-inverse-surface: '#F8FAFC'
-inverse-text: '#0F172A'
+ring: '#2F80ED'
+input: '#233445'
+
+inverse-surface: '#E8EFF5'
+inverse-text: '#0F1B26'
 ```
 
 ## Typography

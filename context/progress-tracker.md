@@ -23,6 +23,7 @@
 ## Completed (WaterWatch brand identity sync)
 
 - **Brand identity sync** across six-file context: added brand descriptor (*Turning community observations into early warnings for waterborne-disease risk*) and WATERWATCH (all-caps) brand mark for stylized/hero contexts. Parent repo commit `docs(context): sync WaterWatch brand descriptor and WATERWATCH brand mark`; app repo commit `chore(app): sync WaterWatch brand descriptor in metadata, manifest, README`.
+- **Navy-dominant re-theme** (C1–C6): New palette — Primary Deep Navy `#123B5D`, Secondary Water Blue `#2F80ED`, Accent Coral Red `#EB5757`. shadcn/ui primitives added. All components migrated from `water-*` tokens. `/design-system` page removed. Lovable prompts + docs aligned with brand design spec. Favicon transparency fixed, maskable icons regenerated with navy bg. Fonts unchanged (Space Grotesk / DM Sans / Geist Mono).
 
 ## Completed (WaterWatch pivot — stack + design system)
 
