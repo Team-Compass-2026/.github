@@ -1,75 +1,69 @@
-# UI Context — Career GPS
+# UI Context — WaterWatch
 
 ## Product feel
 
-Calm, clear, navigator-like. Reduce anxiety; emphasize **clarity and next steps**.
-Avoid hype, "AI purple", or cluttered dashboards on first viewport.
+Calm, clear, local, community-driven. Emphasize **neighborhood awareness and
+next actions**. Avoid fear-mongering, clinical/hospital aesthetics, and dense
+data-heavy dashboards on the citizen side. Risk states are informative, not
+alarming.
 
 ## Brand
 
-- Product name **Career GPS** is hero-level on marketing
+- Product name **WaterWatch** is hero-level on marketing
 - Team Compass🧭 secondary (about / footer)
-- Primary tagline: **Stop guessing. Start building your career.**
-- Short tagline: **Your GPS for career decisions.**
-- Alternative: *Know where you are. Know where you want to go. Know what to do next.*
+- Primary tagline: **See the risk. Share the signal. Protect the community.**
+- Short tagline: **Myanmar's community WASH intelligence layer.**
 
-## Theme — Career Navigation
+## Theme — Community Early Warning
 
-Product should feel like: **Modern EdTech + a clear navigation system** — the
-product loop of Career GPS, not a generic AI startup.
+Product should feel like: **a neighborhood watch for water** — mobile-first,
+friendly, actionable — not a hospital system or a government portal.
 
-Visual language communicates: **Direction → Progress → Confidence → Clarity →
-Growth → Trust**
+Visual language communicates: **Community → Signal → Clarity → Early Warning →
+Safety → Trust**
 
 Emotional journey:
-- "I'm confused." → "I understand where I am." → "I see where I can go." →
-  "I know my next step."
+- "I noticed something wrong with the water." → "I can report it easily." →
+  "I can see what's happening near me." → "I know what to do."
 
-## Navigation Metaphor
+## Report-Type Icons
 
-Use subtle GPS/navigation concepts — compass, routes, waypoints, destination
-markers, milestones, coordinates. **Do not make the UI look like a literal
-Google Maps clone.**
+Always pair an icon with a label:
 
-Brand language to use: your starting point, your destination, your pathway, your
-next step, career route, career milestones, skill gap, progress, explore,
-navigate, recalculate, career direction.
+- 💧 Unsafe water
+- 🧯 Sewage
+- 🌊 Flooding
+- 🔧 Broken infrastructure
+- 🚻 Sanitation problem
+- 🤒 Illness cluster
+- ⚪ Other
 
-Example: *"You are here. Let's find your next step."*
+## Risk Semantics (must be consistent)
 
-UI style: modern, clean, friendly, professional, youth-oriented, trustworthy,
-accessible, AI-native. Avoid too corporate, too childish, too futuristic, or too
-visually complicated.
+Risk level is always a **color + badge label + score** — never color alone.
+
+- 🟢 **LOW** (0–33) — green
+- 🟠 **MODERATE** (34–66) — amber
+- 🔴 **HIGH** (67–100) — red
+
+Use these risk colors only for risk levels, so meaning stays unambiguous.
 
 ## Theme Strategy
 
 ### Light Mode — Primary Experience
 
-Default for: Landing page, Marketing pages, Mentor discovery, Career exploration, Community, Public profiles
+Default for: Citizen app (used outdoors), Landing, Map, Home, Report, Alerts
 Overall experience: bright, optimistic, welcoming
 
-**White + Soft Blue Gray + Deep Navy + Compass Blue**
-with small amounts of teal and amber.
+**White + soft blue-gray + water blue + green/amber/red risk accents.**
 Do not use pure black backgrounds.
 
 ### Dark Mode — Product / Focus Experience
 
-Fully supported. Feel: **Professional + Focused + Premium**
-Dark navy surfaces instead of pure black.
+Supported. Feel: **Professional + Focused**. Dark navy surfaces instead of pure
+black. Suitable for: Organization dashboard, hotspot drill-downs, trends.
 
-Recommended hierarchy:
-- Background: `#0B1120`
-- Cards: `#111827`
-- Elevated surfaces: `#172033`
-- Primary text: `#F8FAFC`
-- Secondary text: `#CBD5E1`
-- Accent: `#60A5FA`
-- Teal: `#2DD4BF`
-- Amber: `#FBBF24`
-
-Dark mode especially suitable for: Mentor dashboard, Student dashboard, Live mentoring sessions, Career roadmap, Messaging, Settings
-
-## Color System — Career GPS Palette
+## Color System — WaterWatch Palette
 
 Light theme:
 ```
@@ -87,41 +81,37 @@ text-disabled: '#94A3B8'
 border: '#E2E8F0'
 border-strong: '#CBD5E1'
 
-primary: '#2563EB'        /* Compass Blue */
-primary-hover: '#1D4ED8'
-primary-active: '#1E40AF'
-primary-soft: '#EFF6FF'
-primary-container: '#DBEAFE'
-
-secondary: '#0F172A'
+primary: '#0284C7'          /* Water Blue */
+primary-hover: '#0369A1'
+primary-active: '#075985'
+primary-soft: '#E0F2FE'
+primary-container: '#BAE6FD'
 on-primary: '#FFFFFF'
 
-teal: '#14B8A6'           /* Fresh Teal */
-teal-soft: '#CCFBF1'
-on-teal: '#042F2E'
+secondary: '#0F172A'
+on-secondary: '#FFFFFF'
 
-amber: '#F59E0B'          /* Soft Amber */
-amber-soft: '#FEF3C7'
-on-amber: '#451A03'
-
-success: '#16A34A'
+success / low-risk: '#16A34A'
 success-soft: '#DCFCE7'
+on-success: '#052E16'
 
-error: '#DC2626'
-error-soft: '#FEE2E2'
+warning / moderate-risk: '#F59E0B'
+warning-soft: '#FEF3C7'
+on-warning: '#451A03'
 
-compass-blue: '#2563EB'
-fresh-teal: '#14B8A6'
-soft-amber: '#F59E0B'
+danger / high-risk: '#DC2626'
+danger-soft: '#FEE2E2'
+on-danger: '#450A0A'
 
-path: '#93C5FD'
-path-active: '#2563EB'
-node: '#2563EB'
+water: '#0EA5E9'
+water-soft: '#E0F2FE'
 
 inverse-surface: '#0F172A'
 inverse-text: '#F8FAFC'
+```
 
 DARK THEME:
+```
 background: '#0B1120'
 surface: '#111827'
 surface-muted: '#172033'
@@ -136,58 +126,51 @@ text-disabled: '#64748B'
 border: '#263449'
 border-strong: '#334155'
 
-primary: '#60A5FA'        /* Compass Blue - dark */
-primary-hover: '#93C5FD'
-primary-active: '#3B82F6'
-primary-soft: '#172554'
-primary-container: '#1E3A8A'
-on-primary: '#0F172A'
+primary: '#38BDF8'          /* Water Blue - dark */
+primary-hover: '#7DD3FC'
+primary-active: '#0EA5E9'
+primary-soft: '#0C4A6E'
+primary-container: '#075985'
+on-primary: '#082F49'
 
 secondary: '#F8FAFC'
 on-secondary: '#0F172A'
 
-teal: '#2DD4BF'
-teal-soft: '#134E4A'
-on-teal: '#042F2E'
-
-amber: '#FBBF24'
-amber-soft: '#451A03'
-on-amber: '#FFFBEB'
-
-success: '#4ADE80'
+success / low-risk: '#4ADE80'
 success-soft: '#14532D'
+on-success: '#052E16'
 
-error: '#F87171'
-error-soft: '#450A0A'
+warning / moderate-risk: '#FBBF24'
+warning-soft: '#451A03'
+on-warning: '#FFFBEB'
 
-compass-blue: '#60A5FA'
-fresh-teal: '#2DD4BF'
-soft-amber: '#FBBF24'
+danger / high-risk: '#F87171'
+danger-soft: '#450A0A'
+on-danger: '#FFFBEB'
 
-path: '#334155'
-path-active: '#60A5FA'
-node: '#60A5FA'
+water: '#38BDF8'
+water-soft: '#0C4A6E'
 
 inverse-surface: '#F8FAFC'
 inverse-text: '#0F172A'
 ```
 
-## Typography — Plus Jakarta Sans
+## Typography
 
-fontFamily: 'Plus Jakarta Sans'
+fontFamily: 'Plus Jakarta Sans' (or an equally legible modern sans-serif)
 
 ```
-hero-display:     64px  800  '72px'  '-0.02em'
-hero-display-mobile: 40px  800  '48px'  '-0.02em'
+hero-display:     56px  800  '64px'  '-0.02em'
+hero-display-mobile: 34px  800  '42px'  '-0.02em'
 
-headline-xl: 48px  800  '56px'  '-0.02em'
-headline-lg:  36px  700  '44px'
-headline-md:  24px  700  '32px'
-title-lg:     20px  700  '28px'
+headline-xl: 40px  800  '48px'  '-0.02em'
+headline-lg:  30px  700  '38px'
+headline-md:  22px  700  '30px'
+title-lg:     18px  700  '26px'
 
-body-lg:  18px  400  '28px'
-body-md:  16px  400  '24px'
-body-sm:  14px  400  '20px'
+body-lg:  17px  400  '27px'
+body-md:  15px  400  '23px'
+body-sm:  13px  400  '19px'
 
 label:    14px  600  '20px'
 label-caps: 12px  600  '16px'  '0.05em'
@@ -195,32 +178,28 @@ label-caps: 12px  600  '16px'  '0.05em'
 
 ## Layout System
 
-- **12-column desktop grid**
-- **Max content width:** 1280px
-- **Desktop horizontal padding:** 80px
-- **Tablet:** 40px
-- **Mobile:** 20px
+- **Mobile-first** — citizen app bottom-tab navigation (Home · Map · Report ·
+  Alerts · Profile)
+- **12-column desktop grid** for the organization dashboard
+- **Max content width:** 1280px (dashboard) / 480px (mobile app)
 - **8px spacing system** — all major spacing values multiples of 8
 
 **Section rhythm (Landing page):**
-- Desktop: 120–128px vertical spacing
-- Tablet: 96px
-- Mobile: 72px
-
-Avoid compressing sections together. Career GPS should feel calm and intentional.
+- Desktop: 96–112px vertical spacing
+- Tablet: 80px
+- Mobile: 56px
 
 ## Key screens (MVP)
 
-1. Landing — brand, one headline, one CTA, pathway visualization ("You are here → Goal → Route → Milestones")
-2. Auth — Better Auth sign-in/up
-3. Onboarding / profile intake
-4. Career recommendations (fit % as guidance + why / what's missing)
-5. Skill gap table
-6. Roadmap timeline (phases + milestones)
-7. AI assistant + citations
-8. Progress tracking (not started / in progress / completed)
+1. Landing — brand, one headline, one CTA, neighborhood risk visualization
+2. Home (Your area) — risk score + why + recommendations
+3. Report — type, location, details, photo, anonymous option
+4. Map — area overlays + report markers + area detail sheet
+5. Alerts — localized warnings + verification requests
+6. Profile — reputation, my reports, settings
+7. Organization dashboard — overall risk, indicators, hotspots, drill-down
 
 ## Responsive
 
-- Mobile: roadmap first; coach in sheet/tab
-- Desktop: roadmap + coach side panel
+- Mobile: citizen app full experience; report-first; map in sheet/tab
+- Desktop: organization dashboard with side-by-side hotspot + report table

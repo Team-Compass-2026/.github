@@ -1,28 +1,30 @@
-# Use Cases — Career GPS (MVP)
+# Use Cases — WaterWatch (MVP)
 
-**Team Compass🧭 · Better Auth · No build until requested**
+**Team Compass🧭 · Supabase Auth · No build until requested**
 
 | ID | Name | Primary actor |
 |----|------|----------------|
-| UC-1 | Sign up / sign in | Learner |
-| UC-2 | Create / edit profile | Learner |
-| UC-3 | Career recommendations (T0 fit) | Learner |
-| UC-4 | Select target career | Learner |
-| UC-5 | Skill gap analysis (T0) | Learner |
-| UC-6 | Personalized roadmap | Learner |
-| UC-7 | Ask Career Assistant | Learner |
-| UC-8 | Track progress | Learner |
-| UC-9 | Curator seed knowledge | Curator |
+| UC-1 | Seed pilot townships + baselines | Admin |
+| UC-2 | Report a WASH problem (anonymous or signed-in) | Resident |
+| UC-3 | View neighborhood map + risk areas | Resident |
+| UC-4 | Verify / dispute a nearby report | Resident |
+| UC-5 | Receive localized alerts | Resident |
+| UC-6 | View area risk explanation | Resident |
+| UC-7 | View org dashboard (hotspots + drill-down) | Organization |
+| UC-8 | Manage org subscription/filters | Organization |
 
-**Alex demo:** UC-1→2→3→4→5→6→7→8 (UC-9 before demo).
+**Demo:** UC-2 → UC-3 → UC-4 → UC-5 → UC-7 (UC-1 before demo).
 
 ## Domain (sketch)
 
-User (Better Auth) → Profile → UserSkill/Career target/Roadmap/Chat  
-Career ↔ Skill via CareerSkill · Resource · KnowledgeChunk (published, no PII)
+User (Supabase Auth) 0..* Report (anonymous: user_id NULL) ·
+Report 1..* Verification — User · Report *..1 Area · Area 1..* RiskScore ·
+Area 1..* Alert · Organization 1..* OrgSubscription — Area
 
 ## Architecture
 
-- T0 SQL: fit + gaps · T1/T2: Q&A · Cite-or-abstain · Session on all mutations
+- RLS on all tables · anonymous report path (user_id NULL) · risk-score
+  functions in SQL/edge functions · Realtime push for maps/alerts ·
+  signals-not-diagnoses
 
-Full architect write-up: enterprise phase use-cases (2026-08-10).
+Full architect write-up: enterprise phase use-cases (pivot 2026-08-20).

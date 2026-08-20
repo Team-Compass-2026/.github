@@ -2,6 +2,8 @@
 
 See full rules: `context/code-standards.md`
 
-Hard gates: Better Auth · Zod in · cite-or-abstain · no PII vectors · secrets out of git · conventional commits.
+Hard gates: Supabase Auth + RLS on every table · Zod in · signals-not-diagnoses ·
+no PII exposure to orgs · anonymous reporting works · secrets out of git ·
+conventional commits.
 
-CODING_STANDARDS_COMPLETE — 2026-08-10
+CODING_STANDARDS_COMPLETE — 2026-08-20 (WaterWatch pivot)

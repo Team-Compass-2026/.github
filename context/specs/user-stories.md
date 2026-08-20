@@ -1,25 +1,26 @@
-# User Stories & Acceptance — Career GPS
+# User Stories & Acceptance — WaterWatch
 
-**Team Compass🧭 · Better Auth · MVP four pillars · No build until requested**
+**Team Compass🧭 · Supabase Auth · MVP five things · No build until requested**
 
 ## Stories
 
 | ID | Title | Priority | SP |
 |----|-------|----------|-----|
-| US-1 | Sign up / sign in (Better Auth) | Must | 3 |
-| US-2 | Create & edit learner profile | Must | 5 |
-| US-3 | Career assessment → 3–5 recommendations | Must | 8 |
-| US-4 | Select target career | Must | 2 |
-| US-5 | Skill gap analysis | Must | 5 |
-| US-6 | Personalized roadmap | Must | 8 |
-| US-7 | Career Assistant (structured data) | Must | 8 |
-| US-8 | Track progress | Must | 5 |
-| US-9 | Curator seed (10–20 careers) | Should | 5 |
+| US-1 | Seed pilot townships + baseline rates | Must | 3 |
+| US-2 | Report a WASH problem (types, location, photo, anonymous) | Must | 8 |
+| US-3 | Report appears on neighborhood map | Must | 5 |
+| US-4 | Verify / dispute nearby reports | Must | 5 |
+| US-5 | Basic risk score per area + explanation | Must | 8 |
+| US-6 | Localized citizen alerts | Must | 5 |
+| US-7 | Organization dashboard (hotspots + drill-down) | Must | 8 |
 
-Build order when requested: US-1 → US-2 → US-9 → US-3 → US-4 → US-5 → US-6 → US-7 → US-8
+Build order when requested: US-1 → US-2 → US-3 → US-4 → US-5 → US-6 → US-7
 
-## Alex demo gate
+## Demo gate
 
-Auth → profile → recommend → select Data Analyst → gaps → roadmap → ask (cite/abstain) → mark progress. No unsourced course URLs; fit scores labeled guidance.
+Report (anonymous) → appears on map → neighbor verifies → risk score updates
+with explanation → citizen alert fires → org dashboard shows the hotspot with
+underlying reports. Reports are labeled signals, not diagnoses; identity fields
+never exposed.
 
-Full AC detail produced in enterprise PM phase (2026-08-10).
+Full AC detail produced in enterprise PM phase (pivot 2026-08-20).

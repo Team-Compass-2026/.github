@@ -1,19 +1,26 @@
-# Risk Analysis — Career GPS (MVP)
+# Risk Analysis — WaterWatch (MVP)
 
-**Team Compass🧭 · Better Auth · No build until requested**
+**Team Compass🧭 · Supabase Auth · No build until requested**
 
 ## P0
-- Authz / session ownership leaks
-- Better Auth misconfiguration
-- Thin corpus → hallucination (cite-or-abstain + seed first)
+- RLS misconfiguration → identity/report leakage (policies on every table;
+  org views exclude identity fields)
+- Spam / duplicate / fake reports inflate scores (cluster + verification gates,
+  rate limits, independent-user cap)
+- Anonymous path accidentally blocked (report must work with user_id NULL)
 
 ## P1
-- Seed/catalog quality · Fit-as-destiny ethics · pgvector/host ops · Chat cost
+- Risk-score tuning (thresholds) · PostGIS query cost · storage/photo abuse ·
+  alert fatigue
+- Misinformation damaging community trust (signals-not-diagnoses copy +
+  explainable scores)
 
 ## P2
-- Scope creep · n8n token leakage (secrets already gitignored)
+- Scope creep (multi-city, sensors, partner rewards) · n8n token leakage
+  (secrets already gitignored)
 
 ## Mitigation themes
-Seed before demo · guidance labels · rate-limit chat · structured-only · rotate n8n if exposed
+RLS-first schema · rate limits · verification weighting · explainable scores ·
+anonymous reporting always on · pilot 2–3 townships before scaling
 
-Full table: enterprise risk-analysis phase (2026-08-10).
+Full table: enterprise risk-analysis phase (pivot 2026-08-20).

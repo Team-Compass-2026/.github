@@ -1,17 +1,21 @@
-# Architecture Review — Career GPS (MVP)
+# Architecture Review — WaterWatch (MVP)
 
 **Team Compass🧭 · GO for tech-selection · No build until requested**
 
 ## Approved
-Next/Hono/Prisma/pgvector · Better Auth · AI SDK coach · T0 fit/gap · hybrid structured cite-or-abstain · no PII in vectors
+Supabase (Postgres + PostGIS + Auth + Storage + Realtime) · Mapbox/Google Maps ·
+deterministic explainable risk engine · RLS on all tables · anonymous reporting
+supported · signals-not-diagnoses
 
 ## Open (tech-selection)
-Better Auth email vs OAuth · Neon vs Supabase · LLM + embeddings provider
+Mapbox vs Google Maps · email vs phone sign-in · risk-score weighting formula ·
+Lovable vs hand-built frontend scaffold
 
 ## QA
-Security pass w/ P0 auth caveats · demo performance OK · cost via rate limits · explainability strong · equity aligned
+Security pass w/ RLS caveats · demo performance OK (small pilot scale) · abuse
+control via rate limits · score explainability strong · community trust aligned
 
 ## MVP pillars
-Profile · recommend · skill gap · structured roadmap/chat — aligned
+Report · map · verify · basic risk score · two views (citizen + org) — aligned
 
-Full write-up: enterprise architecture-review (2026-08-10).
+Full write-up: enterprise architecture-review (pivot 2026-08-20).

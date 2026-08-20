@@ -1,28 +1,30 @@
-# Domain Model — Career GPS (MVP)
+# Domain Model — WaterWatch (MVP)
 
-**Team Compass🧭 · Better Auth · No build until requested**
+**Team Compass🧭 · Supabase Auth · No build until requested**
 
 ## Entities
 
-User · Profile · UserSkill · Career · Skill · CareerSkill · Resource ·
-Roadmap · RoadmapStep · KnowledgeSource · KnowledgeChunk · ChatThread · ChatMessage
+User (Supabase Auth) · Profile · Report · Verification · Area (township/ward,
+PostGIS geometry) · RiskScore · Organization · OrgSubscription · Alert · Photo
 
-Computed (not SoT): CareerFitScore, SkillGap.
+Computed (not SoT): RiskScore breakdown, verification confidence, area trends.
 
 ## Relationships
 
-User 1—1 Profile · User—* UserSkill — Skill · Profile → target Career?  
-User —* Roadmap — Career · Roadmap —* RoadmapStep → Skill?/Resource?  
-Career —* CareerSkill — Skill · Resource linked to skills/careers  
-KnowledgeSource —* KnowledgeChunk (published, no PII) · User —* ChatThread —* ChatMessage
+User 0..1 Profile · User 0..* Report (anonymous: user_id NULL) ·
+Report 1..* Verification — User · Report *..1 Area ·
+Area 1..* RiskScore (snapshot per compute) ·
+Organization 1..* OrgSubscription — Area · Area 1..* Alert
 
 ## Bounded contexts
 
-auth · learner-profile · catalog · recommendation · roadmap · rag-coach · curation
+auth · reporting · verification · geospatial · risk-engine · alerts ·
+organization-intelligence
 
 ## Invariants
 
-Session on mutations · fit = guidance · cite-or-abstain · published-only retrieve ·
-no PII in vectors · coach proposes roadmap changes · curator publishes corpus
+RLS on all tables · anonymous reporting always possible · reports are signals,
+not diagnoses · independent-user cap per verification · no PII exposure to orgs ·
+score always has a component breakdown · rate-limited submissions
 
-Full write-up: enterprise domain-model phase (2026-08-10).
+Full write-up: enterprise domain-model phase (pivot 2026-08-20).

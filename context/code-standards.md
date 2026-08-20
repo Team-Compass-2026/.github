@@ -1,49 +1,55 @@
-# Code Standards — Career GPS
+# Code Standards — WaterWatch
 
 **Team Compass🧭 · Apply when build starts (no scaffold yet)**
 
 ## TypeScript
 - `strict: true`; avoid `any`; prefer `unknown` + narrow
 - Shared types from Zod (`z.infer`); `server-only` where needed
-- ESM; match Next + Hono conventions
+- ESM; match Next + Supabase conventions
 
 ## Naming
 - Components: `PascalCase.tsx` · hooks: `useCamelCase.ts`
-- Server dirs: `kebab-case` / domain (`rag/`, `ai/`, `services/`)
-- Prisma: PascalCase models, camelCase fields
+- Server dirs: `kebab-case` / domain (`risk/`, `reports/`, `alerts/`)
+- Supabase tables: `snake_case` names, `snake_case` columns
 
 ## API & Zod
 - Validate all inputs with Zod before logic
 - Consistent `{ data }` / `{ error: { code, message } }`
-- Better Auth session before mutations; `401` if missing
-- Rate-limit `/api/chat` per user
+- Supabase RLS before writes; `401`/`403` if unauthorized
+- Rate-limit report + verification submissions per user
 
-## Prisma / Neon / pgvector
-- Prisma singleton only; vector/FTS helpers in `rag/`
-- Migrations + curated `data/` seeds
-- **No PII in embeddings**; published chunks only for coach
+## Supabase / Postgres / PostGIS
+- Migrations in `supabase/migrations/`; RLS policies required on every table
+- Geospatial columns use PostGIS; indexes on `(township, created_at)` and
+  geometry (GIST)
+- Seed baseline areas + historical report rates in `supabase/seed.sql`
 
-## Better Auth
-- Email/password MVP only — no parallel auth libs
-- Coach tools: own profile/roadmap + published corpus
+## Auth & Privacy
+- Supabase Auth email/phone; **anonymous reporting** supported
+- PII minimal; identity/contact never exposed to organizations (RLS)
+- Reports are **signals, not diagnoses** — no medical fields
 
-## AI / Structured Data
-- Vercel AI SDK; OpenAI mini + embedding-3-small
-- **Cite-or-abstain** for courses/employers/salaries/jobs
-- Fit/gap/roadmap math in `services/`; LLM explains only
-- Fit scores = guidance, not certainty
+## Risk Engine / Structured Data
+- Deterministic, explainable scoring (volume, cluster, verification, signal mix,
+  recency) in SQL views / edge functions
+- Every score exposes a per-component breakdown ("why did this change?")
+- LLM (if used later) explains signals only; the engine owns the math
 
 ## Testing (MVP)
-- Unit: fusion, citations, fit/gap pure fns
-- Smoke: mocked chat; unauthenticated rejected
-- Manual: Alex demo path
+- Unit: risk-score pure functions (volume/baseline, cluster, verification)
+- Integration: report → verify → score flow; anonymous report path
+- Security: RLS policies — unauthenticated write rejected; orgs can't read
+  identity fields
+- Manual: demo path (report → map → verify → alert → dashboard)
 
 ## Git / secrets
 - `feat|fix|docs|chore|refactor|test(scope): why`
-- Never commit `.env` / tokens
+- Never commit `.env` / tokens / Supabase service keys
 
 ## Lint / format
 - ESLint + Prettier **or** Biome once scaffolded; CI: lint + typecheck
 
 ## Definition of Done
-Spec met · types clean · auth/tenancy · cite-or-abstain if AI · guidance copy · tests for touched logic · no secrets · progress-tracker updated · Alex path unbroken
+Spec met · types clean · RLS/tenancy · signals-not-diagnoses copy · risk scores
+explainable · tests for touched logic · no secrets · progress-tracker updated ·
+demo path (report→verify→score→views) unbroken

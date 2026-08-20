@@ -15,8 +15,9 @@ Once you've scaffolded this project (via `init-context.sh`), fill in the context
 | 7 | `progress-tracker.md` | Current phase, completed items, next steps, open questions |
 
 Optional canonical product spec: `product-spec.md` holds the full master
-specification (problem → MVP → data model → AI/RAG → business model → pitch);
-`project-overview.md` stays the distilled operational view that references it.
+specification (problem → MVP → data model → risk engine → business model →
+pitch); `project-overview.md` stays the distilled operational view that
+references it.
 
 ## Orchestration Loop
 

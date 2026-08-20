@@ -1,9 +1,10 @@
-# Career GPS — Project Overview
+# WaterWatch — Project Overview
 
-**Team:** Team Compass 🧭 · **Track:** T2 — Education Equity · **Hackathon:** DEEP
+**Team:** Team Compass 🧭 · **Hackathon:** DEEP · **Product:** WaterWatch
 
-> **Brand:** Career GPS · Primary tagline: *Stop guessing. Start building your
-> career.* · Short: *Your GPS for career decisions.*
+> **Brand:** WaterWatch · Primary tagline: *See the risk. Share the signal.
+> Protect the community.* · Short: *Myanmar's community WASH intelligence
+> layer.*
 >
 > Canonical full spec: `context/product-spec.md`. Prototype development brief:
 > `context/prototype-spec.md`. Implementation specs: `context/specs/`.
@@ -12,330 +13,221 @@
 
 ## The Problem
 
-Young people today have abundant access to career information through social
-media, online courses, influencers and various platforms. However, this
-abundance often creates confusion rather than clear and reliable information.
-Many young people either remain stagnant because they don't know which advice
-to follow without a clear career strategy. As a result, young people waste a lot
-of time and money developing skills that turn out to be irrelevant while
-lacking practical experience, guidance and professional connections.
+Myanmar faces recurring challenges involving unsafe water, sanitation, flooding,
+and infectious disease outbreaks. This is not simply a problem of people lacking
+health knowledge. It is also a **problem of information and response**:
 
-We all have several wishes for what we want to do in the future. We are often
-influenced by other people's careers, feel left behind and experience FOMO, and
-do everything we can. But we never prepare enough for what we are truly
-interested in and for what the job market actually demands.
+- Water and sanitation problems can emerge at the neighborhood level before they
+  become visible in formal health statistics.
+- Residents may know that their local water looks contaminated, a drain has
+  overflowed, or sewage is leaking, but there is no simple way to turn these
+  observations into a structured community warning.
+- Public-health organizations and NGOs need localized information to decide
+  **where to investigate and where to prioritize limited resources**.
+- Communities often receive information after a problem has already become
+  serious.
 
-The fundamental problem is not *"young people cannot find career information"*
-but:
+The fundamental problem is not *"communities lack information about water"* but:
 
-> **"Young people struggle to turn fragmented career information into a
-> personalized and actionable career strategy."**
+> **"There is no efficient bridge between what residents observe about local
+> water and sanitation and what organizations need to know to respond."**
 
 **Key statistics:**
-- A massive 69% of students in the Gen Z Report say that thinking about their
-  future careers causes them significant stress. Meanwhile, 49% of those in the
-  FE Choices Survey felt pressure from their parents to make good career
-  decisions. — Youth Survey, 2025
-- 44% of surveyed Myanmar youth could not imagine what their future jobs and
-  skills would look like. — JICA, Myanmar Report, 2016
-- Three in four young people aged 18–24 are out of school or training, while
-  young people with higher education are still struggling to find jobs. — UNDP
-  Myanmar Youth survey, 2025
-- ~80% of Myanmar employers reported a mismatch between skills taught and skills
-  demanded by industry. — MYANMAR'S FUTURE JOBS: EMBRACING MODERNITY MAIN
-  REPORT, 2018
+- 3,421 hospitalized acute watery diarrhea (AWD) cases in Yangon Region between
+  24 June and 25 August 2024, including 160 severe-dehydration cases. — WHO
+- After 25 August 2024, no further official Yangon AWD data were shared
+  publicly, while open-source information suggested cases were increasing in
+  some townships. — WHO
+- 8.9 million people in Myanmar need critical WASH services. — UNICEF
+- Over 40% of households lack safely managed drinking water; nearly 40% lack
+  safely managed sanitation; one in three lack basic hygiene services. — UNICEF
 
-## Current Challenges
+## The Gap
 
-There is tons of information out there, which helps us understand, prepare and
-get ready for the career we would like to pursue. However, most of us do not
-progress over time. How many of us leave Duolingo after a couple of weeks? We
-know what we need to do, but we barely put effort and consistency into it due
-to several reasons.
-
-This abundance often creates confusion rather than clear and reliable
-information. Many young people either remain stagnant because they don't know
-which advice to follow without a clear career strategy. As a result, young
-people waste time and money developing skills that turn out to be irrelevant,
-while lacking practical experience, guidance and professional connections.
+**We have people who observe problems.**
+**We have organizations that need information.**
+**But we lack an efficient bridge between the two.**
 
 ## Root Causes
 
-- Advice is generic, often designed for a broad audience rather than an
-  individual's interests, abilities, financial situation, or goals.
-- Conflicting advice makes us more doubtful. One person says "learn PowerBI, be
-  a data analyst", another says "AI is the future, do database engineering",
-  and another says "do arts or study medicine which AI cannot replace." What
-  should we do — especially when we have multi-interest in all of them?
-- Too many possible pathways does not make you smarter. In Myanmar there is a
-  saying: *"The patient is dead due to the multiple treatments from different
-  doctors."* More choices don't necessarily produce better decisions.
-- Most students lack a clear career goal, strong self-awareness, certainty
-  about career outcomes, fear of making the wrong choice, structured
-  decision-making and a personalized roadmap.
-- Career information is fragmented across platforms (information
-  fragmentation), guidance stops after the first answer (lack of continuous
-  guidance), and quality mentoring is not accessible to everyone (limited
-  access to mentoring).
+- Water and sanitation signals emerge at the neighborhood level before they show
+  up in formal health statistics.
+- No simple, low-friction channel for residents to turn observations into
+  structured warnings.
+- Official information can be delayed or limited (e.g. Yangon AWD reporting gap
+  after August 2024).
+- Organizations lack localized data to prioritize limited resources.
+- Communities receive information only after a problem has become serious.
 
 ## Jobs-to-be-Done
 
-- When I am confused about my career, I want to **understand myself** so that I
-  can make a better career decision.
-- When I know the career I want, I want to **understand the gap between my
-  current skills and the required skills** so that I know what to learn.
-- When I am exploring careers, I want **reliable information** so that I do not
-  depend on random social-media advice.
-- When I am choosing between multiple career paths, I want to **compare them**
-  so that I can make an informed decision.
-- When I have a career goal, I want a **step-by-step roadmap** so that I know
-  what to do next.
-- When my situation changes, I want to **update my career plan** so that my
-  roadmap stays relevant.
-- When I need advice, I want **AI and human mentors** so that I receive both
-  scalable and contextual guidance.
+- When I see dirty or cloudy water, I want to **report it quickly** so that my
+  community and responders know about it.
+- When I want to know if my neighborhood is safe, I want to **see local WASH
+  risk** so that I can decide what precautions to take.
+- When someone reports a problem near me, I want to **verify or dispute it** so
+  that misinformation does not become an outbreak signal.
+- When I live in an area with repeated reports, I want to **receive local
+  alerts** so that I can act before the situation worsens.
+- When my organization responds to WASH issues, I want **location-based risk
+  intelligence** so that we can prioritize where to investigate first.
 
 ## Our Solution
 
-Career GPS is an AI-powered career navigation platform that turns a young
-person's interests, skills, education, and goals into a personalized, actionable
-career roadmap. It transforms career goals into clear and actionable pathways.
+WaterWatch is a **community-powered WASH early-warning platform**. Citizens
+report local water and sanitation problems; WaterWatch combines community
+reports, environmental information, geographic data, and historical patterns to
+generate **neighborhood-level WASH Risk Scores** and localized alerts.
 
-Based on each user's goals, current skills and experience, the platform
-recommends next steps to prioritize — such as relevant courses, projects,
-internships and career opportunities — along with an achievable timeline.
+The platform does **not** diagnose cholera. Instead, it identifies **unusual
+community-level signals that may warrant attention**.
 
-The platform answers three fundamental questions:
+**Core loop:** Observe → Report → Verify → Analyze → Alert → Prioritize
 
-1. **Where am I?** — self-discovery and profile
-2. **Where can I go?** — career exploration and matching
-3. **How do I get there?** — skill-gap analysis and a personalized roadmap
-
-Users receive ongoing support, accountability and access to experienced mentors
-from their desired fields. By connecting young people with the right
-information, people and opportunities at the right time, we help them break
-free from career confusion to achieve sustainable career growth. Alongside
-technology, we provide human reinforcement.
-
-**Core loop:** Discover → Explore → Compare → Plan → Act → Track → Adapt
-
-**Master flow:** Understand yourself → Explore careers → Choose a direction →
-Identify skill gaps → Build your roadmap → Take action → Track progress → Get
-guidance → Reassess → Update your path.
+**Master flow:** Residents observe → submit structured report (what / where /
+when / photo, anonymous option) → nearby users verify → system aggregates
+geographically and temporally → citizens receive localized alerts → organizations
+receive a prioritization dashboard.
 
 ## How It Is Different From Other Solutions
 
-**Competitor analysis:** A student meets a mentor, talks for one hour, makes
-some progress, and maybe meets again next month — or never meets again and
-disappears.
+A resident's observation of brown water is, by itself, a small signal. A health
+ministry's dashboard is, by itself, too slow and too coarse. WaterWatch is the
+only piece that **connects resident observations → structured warnings →
+verification → neighborhood risk → local alerts → prioritized response** into
+one loop.
 
-**Our platform converts all the efforts, passions and interests into actual
-ACTIONS** with progress tracking, internship opportunities, and so on.
-
-Career websites provide information, job platforms provide vacancies, course
-platforms provide learning resources, personality tests provide assessments,
-mentors provide advice, AI assistants provide answers. Career GPS is the only
-piece that **connects self → career → skills → gap → roadmap → action →
-progress → mentoring** into one journey.
-
-Differentiation: **personalization + evidence + structured planning + human
-connection**, not a generic chatbot answer to "How do I become X?" and not a
-static career website.
-
-**Digital entrepreneurship & technology integration:** We use technology to
-create a continuous career-support system that remembers a student's goals,
-tracks their progress, coordinates mentors and opportunities, detects when they
-are falling behind, and intervenes before they give up. We are building a
-technology-enabled career-development service that coordinates personalized
-guidance, human mentorship, accountability, and real-world opportunities.
+Differentiation: **community participation + geographic aggregation + signal
+verification + information reciprocity** — not a survey tool, not a government
+hotline, not a clinical tracker.
 
 ## How It Works: User Journey
 
-**Career GPS journey (navigation):**
-1. **Start** — create an account and provide basic information.
-2. **Understand Yourself** — education, skills, interests, experience, goals,
-   preferences.
-3. **Explore Careers** — system recommends potential career paths.
-4. **Compare Paths** — compare careers by required skills, education,
-   responsibilities, growth, demand, entry requirements.
-5. **Select a Direction** — choose a target career or keep several paths.
-6. **Identify the Gap** — current profile → target career requirements.
-7. **Generate Career Roadmap** — a personalized, phased pathway.
-8. **Take Action** — concrete next steps.
-9. **Track Progress** — skills, courses, projects, applications, milestones.
-10. **Adapt** — the roadmap changes as the user grows.
-
-**Career Support Journey:** Discover → Prepare → Experience → Launch → Grow.
-Students can enter anywhere in the journey:
-
-```
-┌── Career Discovery
-│
-├── Skill Development
-│
-Student ─────────┼── Mentorship
-│
-├── Internship / Experience
-│
-└── Job Preparation
-      ↓
-   Career Growth
-```
-
-**User Journey (MVP demo):** Landing → sign up → profile (education, skills,
-interests, experience, goals) → career assessment (3–5 recommendations with
-explanations) → select target career → skill-gap table → personalized roadmap →
-AI Career Assistant (structured, cite-or-abstain) → progress tracking.
-
-**Demo persona:** Alex (CS student, basic Python/HTML/Excel, 10h/week, Data
-Analyst goal).
+1. **Observe** — a resident notices dirty water, sewage overflow, flooding,
+   broken infrastructure, unsafe sanitation, or unusual illness.
+2. **Report** — submit what happened, where, when, and (optionally) a photo;
+   anonymous reporting supported.
+3. **Verify** — nearby users confirm or dispute; independent confirmations raise
+   confidence.
+4. **Analyze** — the system looks for unusual increases, geographic clusters,
+   repeated reports, signal combinations, and changes vs. historical patterns.
+5. **Alert** — citizens receive localized alerts with practical
+   recommendations.
+6. **Prioritize** — organizations receive a dashboard of priority zones and
+   underlying reports.
 
 ## Unique Selling Point
 
-We convert all the efforts, passions and interests into actual ACTIONS with
-progress tracking, internship opportunities, and real-world experience — not
-just advice. Our platform remembers a student's goals, tracks their progress,
-coordinates mentors and opportunities, detects when they are falling behind and
-intervenes before they give up.
+WaterWatch gives every user something valuable in return for their
+participation. Citizens contribute information and receive **better information
+about their own neighborhood** — local alerts, risk scores, verification, and
+practical recommendations. Organizations receive **where to investigate first**.
 
-> Your GPS for career decisions.
-
-**Continuous support loop:**
-
-```
-STUDENT → Career Profile + AI → Initial Roadmap → Early Adoption →
-MENTOR (Validate/Adjust) → Personalized Plan → TASKS + SCHEDULE → EXECUTION →
-PROGRESS MONITOR → [ON TRACK → Continue] / [AT RISK → Root-cause analysis →
-Intervention → Adjust plan / Mentor] → EXECUTION → REAL-WORLD EXPERIENCE →
-INTERNSHIP / JOB
-```
+> See the risk. Share the signal. Protect the community.
 
 ## Impacts
 
-- Reduce career confusion and stress for young people
-- Decrease time and money wasted on irrelevant skills
-- Increase practical experience through internship opportunities
-- Improve job placement rates for graduates
-- Bridge the skills gap between education and industry demands
-- Increase career clarity, self-awareness, skill development, employability,
-  internship readiness, job readiness, confidence, and access to mentoring
+- Earlier detection of WASH-related risk in neighborhoods
+- Better targeting of limited response resources
+- Reduced information asymmetry between communities and responders
+- Community participation in health monitoring
+- Increased WASH awareness and preparedness
+- A replicable early-warning layer for other cities and other
+  environmentally-linked health risks
 
 ## Business Model
 
-**Values and efforts each stakeholder puts into the model:**
+**Primary revenue — WASH Intelligence Platform:**
+- Free citizen platform (maximize the network): report, view risk, alerts,
+  verify, hotspots, prevention info.
+- Paid organizational platform: hotspot map, trends, risk scoring, analytics,
+  geographic filtering, automated reports, export/API tiers.
 
-| Stakeholder | Contribution |
-|-------------|--------------|
-| **Mentor** | experience, feedback, perspective, professional advice, industry context, networking |
-| **Platform** | roadmap, tasks, progress tracking, reminders, accountability, reporting |
-| **Student** | execution |
-
-**Mentor Tiers** — students choose the level of support they need, with
-flexibility in pricing:
-
-| Mentor Type | Details |
-|-------------|---------|
-| Community mentor | Group sessions · Volunteer / reputation-based |
-| Professional mentor | Individual session |
-| Industry mentor | Specialised expertise |
-| Career advisor | High-touch support |
-
-**Revenue directions:**
-- **Freemium** — free exploration/profile/recommendations; premium roadmap,
-  advanced gap analysis, AI assistant, progress tracking.
-- **B2B / Institutional** — "Career GPS for institutions" (universities,
-  schools, training orgs, NGOs, youth programs).
-- **Mentor Marketplace (future)** — paid sessions, subscriptions, commission.
-- **Employer Partnerships (future)** — internship matching, graduate talent
-  discovery, skills-based recruitment.
+**Secondary revenue — Sponsored WASH Monitoring ("WASH Monitoring as a
+Service"):** an NGO funds monitoring of specific townships for a period
+($15,000–50,000/year depending on scale). Selling an outcome/service, not
+software.
 
 ## Market Entry Strategies
 
-- Launch with curated careers (10–20) and a high-quality small dataset (not web
-  crawl)
-- Focus on Education Equity track: guidance without paid counselors or elite
-  networks
-- Start with profile → career recommendations → skill gap → roadmap flow
-- Integrate with existing education ecosystems
-- **Phase 1 — Students:** university students and young people
-- **Phase 2 — Career Communities:** student orgs, youth orgs, universities, NGOs
-- **Phase 3 — Mentors:** build a mentor network
-- **Phase 4 — Institutions:** offer Career GPS as a career-development platform
-- **Phase 5 — Employers:** connect qualified users with internships and
-  entry-level opportunities
+- **Phase 1 — One Yangon pilot:** 2–3 townships, partners (universities, student
+  orgs, NGOs, community groups, clinics, water-testing providers), 500–1,000
+  users.
+- **Phase 2 — Build the data network:** "Check Your Neighborhood" campaigns,
+  WaterWatch Guardians.
+- **Phase 3 — Sell the intelligence:** 30-day pilot dashboards → subscriptions.
+- **Phase 4 — Expand:** Yangon → Mandalay → other Myanmar cities → regional WASH
+  markets.
 
-## Projected Market Growth
+## The Ask
 
-[To be researched — education technology and career services are growing
-steadily; long-term vision is to become career-navigation infrastructure
-connecting young people, education, mentors, learning resources, and employers.]
+We are seeking **US$10,000 in pilot funding, technical support, and
+partnerships** to build and test WaterWatch in Yangon. The pilot answers three
+questions:
+
+1. Will people actually report WASH problems?
+2. Can community reports produce useful localized risk signals?
+3. Will organizations pay for the resulting intelligence?
 
 ## Team
 
 **Team Compass 🧭**
-- Lead: Team Compass 🧭
-- Track: T2 — Education Equity
+- Product: WaterWatch
+- Hackathon: DEEP 2026
 
-## MVP (Must)
+## MVP (Must) — Version 1, five things only
 
-1. User onboarding — education, skills, interests, career goal, experience
-2. Career recommendations — scored guidance indicator
-3. Career explanation — why the career fits, required skills, missing skills
-4. Skill gap analysis
-5. Personalized roadmap (structured data)
-6. AI career assistant (structured, cite-or-abstain)
-7. Progress tracking (basic)
+1. User reports a WASH problem.
+2. Report appears on a map.
+3. Nearby users can verify it.
+4. System calculates a basic risk score.
+5. Users and organizations receive different views of the information.
 
 ## Later (out of MVP build)
 
-- Job/internship matching, CV/portfolio analysis, interview prep
-- Mentor matching and marketplace, scholarship discovery, labor-market live
-  feeds, multi-agent tools, RAG expansion of the knowledge base
+Sensor/rainfall data feeds · automated intelligence reports · export/API access
+· multi-language · offline-first reporting · contribution badges/rewards ·
+partner rewards marketplace · multi-city expansion · sponsored monitoring
+programs.
 
 ## Target Users
 
-University / high-school / college students, recent graduates, career switchers,
-self-learners lacking counselors or networks. People who feel overwhelmed by
-career information or who have a career goal but do not know how to reach it.
+**Primary — citizens:** Yangon residents, families in flood/sanitation-vulnerable
+areas, students and young adults, community volunteers, residents dependent on
+local water sources or vendors.
+
+**Secondary — organizations:** NGOs, humanitarian and WASH organizations,
+clinics and health facilities, researchers, water-service providers, local
+authorities.
 
 ## Ethics & Privacy
 
-Recommendations are **guidance, not destiny**. Explain recommendations; show
-evidence where possible; encourage multiple paths; no discriminatory routing;
-collect minimum data; PII not in public data corpus; users can control/delete
-profile data (design for MVP+). Distinguish verified data from AI suggestions
-and let users challenge recommendations.
+Reports are **signals, not diagnoses**. Anonymous reporting fully supported;
+identity optional; PII minimized. Verification + clustering reduce
+misinformation. The platform informs communities — it does not surveil them.
+Community data is not resold in ways that harm communities.
 
 ## Success Metrics
 
-- **User:** onboarding completion, exploration rate, roadmap creation/completion,
-  weekly active users
-- **Outcome:** career clarity and confidence before/after, completed roadmap
-  steps, skill development, internship/job applications
-- **AI:** recommendation relevance, retrieval accuracy, hallucination rate,
-  response usefulness
+- **User:** reports submitted, active reporters per township, verification
+  completion rate, alert opt-in, weekly active users
+- **Signal quality:** verified-report rate, duplicate rate, agreement with
+  on-the-ground checks
+- **Outcome:** observation→alert time, organization engagement, pilot
+  subscription conversions
+- **Pilot questions:** Will people report? Do signals align with reality? Will
+  organizations pay?
 
 ---
 
 ## Reference: Team Compass (Heritage)
 
-*The original pitch framing (kept as reference — the brand is now Career GPS).*
+*The original pitch framing (kept as reference — the brand is now WaterWatch).*
 
-A Personalised Career Companion that stays with you until you reach the
-milestone. Slogan: *We stay with you until you do it.*
+The previous project was **Career GPS** — an AI-powered career navigation
+platform helping young people turn fragmented career information into a
+personalized, evidence-based roadmap. Brand: *Stop guessing. Start building your
+career.* Journey: **Confusion → Understanding → Planning → Learning → Action →
+Career Readiness**.
 
-**User Journey:**
-- Step 1: Finding career path based on their personality, interests and skills
-- Step 2: Connecting with a Mentor
-- Step 3: Making regular progress based on the Mentor's instruction and
-  suggestion
-- Step 4: Linking with the practical world — Internship
-- Step 5: Preparing for a job interview / Connection
-- Step 6: Landing a job
-
-**Career Support Journey:** Discover → Prepare → Experience → Launch → Grow.
-Students can enter anywhere.
-
-**Prototype journey (6-page clickable prototype):**
-LANDING → ASSESSMENT → ASSESSMENT RESULT → CAREER PATHWAY → NEXT MOVE → MENTOR
-→ PROGRESS
+Team Compass 🧭 retains its name; the product is now **WaterWatch**.

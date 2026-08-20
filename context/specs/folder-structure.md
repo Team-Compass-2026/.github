@@ -1,51 +1,44 @@
 # Folder Structure (full MVP proposal)
 
-See also: `docs/architecture/27-folder-structure.md`
+See also: `docs/architecture/folder-structure.md`
 
 ```text
-career-gps/
+waterwatch/
 ├── app/
 │   ├── layout.tsx
 │   ├── globals.css
-│   ├── page.tsx              # Landing page (Marketing)
-│   ├── (marketing)/
-│   │   └── page.tsx
-│   ├── (auth)/
-│   │   ├── sign-in/
-│   │   │   └── page.tsx
-│   │   └── sign-up/
-│   │       └── page.tsx
-│   └── (dashboard)/
-│       ├── profile/
-│       │   └── page.tsx
-│       ├── recommend/
-│       │   └── page.tsx
-│       ├── gaps/
-│       │   └── page.tsx
-│       ├── roadmap/
-│       │   └── page.tsx
-│       └── coach/
-│           └── page.tsx
+│   ├── page.tsx              # Landing page (marketing)
+│   ├── (citizen)/
+│   │   ├── home/             # Your area — risk score + why
+│   │   ├── report/           # Report a WASH problem
+│   │   ├── map/              # Neighborhood map + area detail
+│   │   ├── alerts/           # Localized alerts + verification
+│   │   └── profile/          # Reputation, my reports, settings
+│   └── (org)/
+│       ├── dashboard/        # Overall risk + indicators
+│       ├── hotspots/         # Priority areas list
+│       ├── hotspots/[area]/  # Drill-down to reports
+│       ├── trends/
+│       └── settings/
 ├── components/
 │   ├── ui/
-│   ├── mentor-cards/
-│   ├── course-cards/
-│   ├── progress-bars/
+│   ├── report-cards/
+│   ├── risk-badges/
+│   ├── map/
+│   ├── alert-cards/
 │   └── navigation/
 ├── lib/
-│   ├── validations/
-│   ├── ai-tools/
-│   └──supabase/
-├── prisma/
-│   ├── schema.prisma
+│   ├── validations/          # Zod schemas
+│   ├── risk/                 # risk-score pure functions
+│   └── supabase/             # client/server + RPC helpers
+├── supabase/
 │   ├── migrations/
-│   └── seed.ts
-├── data/                      # CSV + knowledge base
-├── scripts/ingest-knowledge.ts  # post-scaffold
+│   ├── seed.sql              # pilot townships + baselines
+│   ├── functions/            # edge functions
+│   └── storage/
+├── public/                   # report photos bucket mirror config
 ├── context/ · docs/ · .cursor/skills/
-├── manifest.json              # PWA manifest
-├── favicon.ico
-├── next-config.js
+├── next.config.js
 ├── tailwind.config.js
 ├── package.json
 └── .env.example
