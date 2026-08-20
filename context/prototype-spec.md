@@ -13,6 +13,26 @@ sanitation problems; organizations receive location-based risk intelligence.
 
 ---
 
+## Prototype Implementation (civic-alert-system/)
+
+**Stack:** TanStack Start + React 19 + Tailwind v4 + Supabase (Postgres + Auth
++ Storage). Deployed via Vercel with Nitro adapter.
+
+**Deployed URL:** https://civic-alert-system-theta.vercel.app/
+
+**Routes:** `/` (landing), `/home`, `/report`, `/map`, `/alerts`, `/profile`,
+`/dashboard`, `/sign-in`, `/sign-up`.
+
+**Supabase:** local `.env` configured (7 keys); `.env.example` committed.
+User must connect `SUPABASE_URL` + `SUPABASE_PUBLISHABLE_KEY` in Lovable Cloud.
+
+**Seeds:** demo alerts seed + `report-photos` storage bucket migration.
+
+**Content parity:** matches waterwatch + master spec (3,421 AWD, 8.9M WASH,
+Hlaing Tharyar HIGH 82/100).
+
+---
+
 ## Product Concept
 
 The platform bridges residents who observe problems with organizations that need
