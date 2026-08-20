@@ -1,6 +1,6 @@
 # User Stories & Acceptance — WaterWatch
 
-**Team Compass🧭 · Supabase Auth · MVP five things · No build until requested**
+**Team Compass🧭 · Active build · Main app: Prisma 7 + Neon + Better Auth · Lovable path: Supabase Auth · MVP five things**
 
 ## Stories
 

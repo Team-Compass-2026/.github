@@ -1,13 +1,15 @@
-# Spec: WaterWatch MVP pillars (docs-ready; build later)
+# Spec: WaterWatch MVP pillars
 
 ## Goal
 
-When build starts: report (anonymous + signed-in) → map → verify → basic risk
-score → citizen alert / org dashboard — the five things only, end-to-end.
+Report (anonymous + signed-in) → map → verify → basic risk score → citizen
+alert / org dashboard — the five things only, end-to-end. **Implemented in the
+main app** (Next.js + Neon + Better Auth + Hono); mirrored on the Lovable/
+Supabase path.
 
-## In scope (first build)
+## In scope
 
-- Supabase project + schema + RLS + PostGIS setup
+- Neon schema + Prisma 7 + seed (main app) · Supabase schema + RLS + PostGIS (Lovable)
 - Report form: type, location (map pin / GPS), time, photo (optional),
   anonymous option
 - Report appears on a map with report-type markers
@@ -18,7 +20,6 @@ score → citizen alert / org dashboard — the five things only, end-to-end.
 
 ## Out of scope
 
-- Scaffold before explicit "build" request
 - Sensors/rainfall feeds, multi-city, partner rewards, multi-language,
   export/API tiers
 

@@ -1,6 +1,6 @@
 # Risk Analysis — WaterWatch (MVP)
 
-**Team Compass🧭 · Supabase Auth · No build until requested**
+**Team Compass🧭 · Active build · Main app: Better Auth session + Hono rate limits · Lovable path: Supabase Auth + RLS**
 
 ## P0
 - RLS misconfiguration → identity/report leakage (policies on every table;

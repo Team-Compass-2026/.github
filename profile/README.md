@@ -27,7 +27,7 @@ waterborne-disease risk.*
 
 ## 📚 Repositories
 
-- **[waterwatch](https://github.com/Team-Compass-2026/waterwatch)** — the product codebase (citizen app + org dashboard; Supabase + Mapbox/Google Maps)
+- **[waterwatch](https://github.com/Team-Compass-2026/waterwatch)** — the product codebase (citizen app + org dashboard; Next.js 16 + Neon Postgres + Better Auth + Hono + React Query, with a Lovable/Supabase prototype path)
 
 ## 🧑‍💻 The problem we're solving
 

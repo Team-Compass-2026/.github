@@ -1,6 +1,6 @@
 # Domain Model — WaterWatch (MVP)
 
-**Team Compass🧭 · Supabase Auth · No build until requested**
+**Team Compass🧭 · Active build · Main app: Prisma 7 + Neon (see `waterwatch/prisma/schema.prisma`) · Lovable path: Supabase Auth + PostGIS**
 
 ## Entities
 

@@ -1,6 +1,6 @@
 # Use Cases — WaterWatch (MVP)
 
-**Team Compass🧭 · Supabase Auth · No build until requested**
+**Team Compass🧭 · Active build · Main app: Prisma 7 + Neon + Better Auth · Lovable path: Supabase Auth**
 
 | ID | Name | Primary actor |
 |----|------|----------------|

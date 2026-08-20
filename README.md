@@ -22,9 +22,9 @@ community WASH intelligence layer.*
 ## Repositories
 
 - **[waterwatch](https://github.com/Team-Compass-2026/waterwatch)** — the product
-  codebase (citizen app + organization dashboard; Supabase + Mapbox/Google Maps,
-  Lovable/Next.js frontend). `README.md` there describes the product and app
-  setup.
+  codebase (citizen app + organization dashboard; Next.js 16 + Neon Postgres +
+  Better Auth + Hono + React Query, with a Lovable/Supabase prototype path).
+  `README.md` there describes the product and app setup.
 - **[.github](https://github.com/Team-Compass-2026/.github)** — this org repo:
   org profile, issue/PR templates, and shared project context.
 
