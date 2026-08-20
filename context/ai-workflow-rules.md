@@ -6,8 +6,9 @@ Spec-driven against six-file context (`context/*`) + `waterwatch/docs/`. Do not
 invent report categories, townships, or scoring rules outside the curated
 product design.
 
-**Current mandate: active development on the main app (Next.js + Neon). Keep the
-Lovable/Supabase prototype path in sync via `waterwatch/docs/lovable/` prompts.**
+**Current mandate: active development on the main app (Next.js + Neon). The
+Lovable prototype lives in `civic-alert-system/` (TanStack Start + Supabase)
+with its own `context/` directory.**
 
 ## Scoping Rules
 
@@ -27,7 +28,7 @@ dashboard.
 |---------|-------------|
 | Reports / verifications | `architecture.md` storage + access control |
 | Risk score / alerts | `architecture.md` risk engine |
-| Map / geospatial | Main app: React Leaflet + OSM (haversine in risk engine) · Lovable path: PostGIS + Mapbox/Google Maps |
+| Map / geospatial | Main app: React Leaflet + OSM (haversine in risk engine) · Lovable path: Leaflet + react-leaflet + OSM + Supabase |
 | New report types / areas | `context/product-spec.md` §6 + `context/specs/` |
 
 ## Verification (when building)

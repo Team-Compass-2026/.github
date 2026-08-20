@@ -59,6 +59,13 @@
   and the `career-gps` repo, now archived as reference (and the stack source
   for WaterWatch).
 
+## Lovable Prototype (civic-alert-system/)
+
+The fully-Lovable prototype now lives in its own repo:
+`Team-Compass-2026/civic-alert-system` (TanStack Start + Supabase).
+It has its own `context/` directory, `project.yaml`, and `AGENTS.md`.
+The `.env` file (SUPABASE_* / VITE_SUPABASE_*) is untracked by design.
+
 ## In Progress
 
 - Neon provisioning + env: needs `DATABASE_URL`, `BETTER_AUTH_SECRET`,
@@ -71,8 +78,7 @@
 - Create Neon project + branch, run `prisma migrate dev --name init` +
   `prisma db seed`; set env vars; re-run build + smoke test
 - Seed the 5 pilot areas; verify `/api/reports` POST and `[id]/verify` in dev
-- Build the Lovable design-system library (tokens → waves 1–4 → showcase)
-  per `docs/lovable/design-system-build.md`
+- In `civic-alert-system/`: env setup, RLS hardening, risk-score wiring, demo path
 - Optional: enforce org membership/RBAC for `/dashboard`
 
 ## Open Questions
@@ -88,8 +94,8 @@
 - **Main app:** Prisma 7 + `@prisma/adapter-pg` + Neon Postgres + Better Auth +
   Zod 4 (career-gps stack, mirrored) — pages fall back to sample data until DB
   is configured
-- **Lovable path:** Supabase (Postgres + Auth + Storage + RLS) per
-  `supabase/migrations/0001_init.sql`
+- **Lovable prototype:** civic-alert-system repo (TanStack Start + Supabase);
+  see `civic-alert-system/project.yaml` for stack details
 - Maps: React Leaflet 5 + OpenStreetMap (no Mapbox key needed)
 - Deterministic, explainable 4-level risk engine (no LLM in the core math)
 - Design system shared across both stacks: 4-level risk, Space Grotesk + DM
