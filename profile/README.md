@@ -31,16 +31,21 @@ waterborne-disease risk.*
 
 ## 🧑‍💻 The problem we're solving
 
-- **3,421** hospitalized acute watery diarrhea cases in Yangon Region between
-  June–August 2024, including 160 severe-dehydration cases (WHO)
+- **3,421** hospitalized acute watery diarrhea (AWD) cases in Yangon Region
+  between June–August 2024, including **160 severe-dehydration** cases (WHO)
 - **8.9 million** people in Myanmar need critical WASH services (UNICEF)
 - **40%+** of households lack safely managed drinking water, and nearly **40%**
-  lack safely managed sanitation (UNICEF)
+  lack safely managed sanitation; **one in three** lack basic hygiene services
+  (UNICEF)
 
 Water and sanitation problems emerge at the neighborhood level long before they
 show up in official health statistics. Communities observe these signals daily —
 but there is no simple bridge between what residents see and what responders
 need to know.
+
+And it's not just cholera — the same early-warning infrastructure can monitor
+acute watery diarrhea, flooding, contaminated water, sanitation failures, and
+other environmentally linked health risks.
 
 ## 🤝 Get involved
 
