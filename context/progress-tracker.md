@@ -138,6 +138,44 @@ The `.env` file (SUPABASE_* / VITE_SUPABASE_*) is untracked by design.
 
 ## Session Notes
 
+- Seeder rewritten (`supabase/seed-full.sql`): fully idempotent (NOT EXISTS
+  guards on every report/alert insert) and now creates one demo account per
+  role — admin@waterwatch.dev (sees everything), org@waterwatch.dev
+  (dashboard pinned to Hlaing Tharyar + Shwepyithar), citizen@waterwatch.dev
+  (home = Dala); shared password `WaterWatch2026!`. Includes auth.identities
+  rows so email/password sign-in works.
+- New migration `20260821051000_allow_multi_area_roles.sql`: drops
+  `unique(user_id, role)` on user_roles (which capped org accounts at ONE
+  pinned area) for a `(user_id, role, area_id)` unique index — matches the
+  array-based roleAreaIds scoping in access.server.ts.
+- Header now shows a sign-out control when signed in: desktop gets an
+  icon button next to Profile, the mobile menu gets a "Sign out" entry;
+  both clear the query cache, sign out via Supabase and return to /auth
+  (same flow as the profile page).
+- Profiles gained optional `display_name` + `phone` columns (migration
+  `20260821040000_add_profile_details.sql`, types.ts updated). New
+  `updateMyProfileInfo` server fn (zod-trimmed, nullable) and a "Your
+  details" card on /profile to edit them; signed-in card shows the name
+  when set. Migration NOT yet applied to remote Supabase — MCP timed out;
+  run `supabase db push` before testing.
+- Alerts page cards now wrap into responsive grids on desktop
+  (Your area `md:grid-cols-2`; township groups + verify card
+  `sm:grid-cols-2 xl:grid-cols-3`) instead of stretching full-width.
+- Home ("Your area") rebuilt on the standard `max-w-6xl` container with a
+  desktop grid: risk card (2/3) + why-score card (1/3), recent reports (2/3) +
+  nearby areas (1/3); header + neighborhood select share one row.
+- Profile normalized from a 30rem column to the same `max-w-6xl` grid
+  (account/alerts/reports left, reputation/settings right); FAQ widened
+  `max-w-md → max-w-2xl`. Auth pages intentionally stay narrow.
+- Report page rebuilt on the standard `max-w-6xl` container: steps 1–3
+  (type / map / details) as cards in the left 2/3, privacy + submit sidebar
+  right; type picker 3-up on desktop; success card moved outside the form.
+- Header nav active tab fixed: state colors moved into activeProps/
+  inactiveProps (router concatenates them with base className); active tab
+  renders a filled pill + aria-current; fuzzy match keeps /dashboard active
+  on child routes. Cleared all pre-existing lint errors/warnings (card empty
+  interfaces, access.server anys, drawer exhaustive-deps, design-system
+  react-refresh override).
 - Full-stack foundation completed in one push: stack swap, schema, backend,
   API routes, page wiring (parallel subagents), design system + docs, Lovable
   prompts — three commits pushed (`ef97096`, `dd981aa`, `cf76e2a`).
