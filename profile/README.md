@@ -27,7 +27,8 @@ waterborne-disease risk.*
 
 ## 📚 Repositories
 
-- **[waterwatch](https://github.com/Team-Compass-2026/waterwatch)** — the product codebase (citizen app + org dashboard; Next.js 16 + Neon Postgres + Better Auth + Hono + React Query, with a Lovable/Supabase prototype path)
+- **[civic-alert-system](https://github.com/Team-Compass-2026/civic-alert-system)** — the product codebase (citizen app + org dashboard; TanStack Start + React 19 + Tailwind v4 + Supabase) · **live at [civic-alert-system-theta.vercel.app](https://civic-alert-system-theta.vercel.app/)**
+- **[waterwatch](https://github.com/Team-Compass-2026/waterwatch)** — archived Next.js 16 + Neon Postgres prototype, kept for design/data-model reference only
 
 ## 🧑‍💻 The problem we're solving
 
