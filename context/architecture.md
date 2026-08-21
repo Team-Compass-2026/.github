@@ -5,20 +5,33 @@
 > scoring over community reports + verification. No medical diagnosis, no
 > epidemiological inference engine in v1.**
 
-## Dual-path build
+## Delivery path (updated Aug 21, 2026)
 
-WaterWatch ships on **two parallel implementations** (locked in
-`project.yaml`, `docs/setup.md`):
+WaterWatch is now built on a **single active implementation**:
 
-1. **Main app — Next.js + Neon** (`waterwatch/`, this repo): production-quality
-   backend with Prisma 7 + Neon Postgres, Better Auth, Hono API, React Query.
-2. **Prototype — Lovable + Supabase** (`docs/lovable/` prompts + `supabase/`
-   migrations): fast-build citizen app + org dashboard for demos.
+1. **Main app — TanStack Start + Supabase** (`civic-alert-system/`, own repo):
+   the active product. Citizen app + org dashboard, deployed on Vercel
+   (https://civic-alert-system-theta.vercel.app/).
+2. **Archived reference — Next.js + Neon** (`waterwatch-nextjs/`): the former
+   main app (Prisma 7 + Neon Postgres, Better Auth, Hono API). Kept for
+   design/data-model reference only — no further development.
 
-This doc describes the **main app**. The Lovable/Supabase path mirrors the same
-data model with Supabase Auth, PostGIS and Realtime.
+## Stack (main app — civic-alert-system)
 
-## Stack (main app)
+| Layer | Technology | Role |
+| ----- | ---------- | ---- |
+| Frontend | TanStack Start + React 19 + TypeScript | Citizen app + org dashboard |
+| Styling | Tailwind CSS v4 | Design tokens + utilities |
+| Client data | **TanStack Query** | Server state |
+| Backend | TanStack Start **server functions** (`src/lib/*.functions.ts`) | Report feed / create / dashboards |
+| Auth | **Supabase Auth** (email/password, JWT) | Sessions / identity |
+| Database | **Supabase Postgres** + RLS policies | Reports, verifications, areas, alerts, roles |
+| Risk engine | Deterministic SQL views (`v_report_feed`, risk views) | Volume, cluster, verification, signal mix, recency |
+| Maps | **React Leaflet 5** + OpenStreetMap (free tiles, no key) | Neighborhood map + area overlays |
+| Files | Supabase Storage (`report-photos` bucket) | Report photos |
+| Hosting | Vercel (Nitro adapter on `VERCEL=1`) | Hackathon deploy |
+
+## Stack (archived — waterwatch-nextjs)
 
 | Layer | Technology | Role |
 | ----- | ---------- | ---- |

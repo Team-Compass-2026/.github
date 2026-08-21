@@ -2,8 +2,11 @@
 
 ## Repositories
 
-- **waterwatch/** — main app (Next.js 16 + Neon Postgres + Prisma + Better Auth + Hono)
-- **civic-alert-system/** — Lovable prototype (TanStack Start + React 19 + Supabase)
+- **civic-alert-system/** — MAIN APP (TanStack Start + React 19 + Tailwind v4 +
+  Supabase). This is the active delivery path; deployed at
+  https://civic-alert-system-theta.vercel.app/
+- **waterwatch-nextjs/** — ARCHIVED prototype (Next.js 16 + Neon Postgres +
+  Prisma + Better Auth + Hono). Reference only — do not develop here.
 
 ## Context read order
 
@@ -24,5 +27,5 @@
 
 - `context/product-spec.md` holds the master product specification
 - Each nested repo has its own `context/` and `AGENTS.md` for local context
-- `waterwatch/` = main app (Next.js + Neon + Prisma)
-- `civic-alert-system/` = Lovable prototype (TanStack Start + Supabase)
+- `civic-alert-system/` = main app (TanStack Start + Supabase) — all feature work happens here
+- `waterwatch-nextjs/` = archived Next.js prototype — kept for design/data-model reference only

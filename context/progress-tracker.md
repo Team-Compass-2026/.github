@@ -2,23 +2,20 @@
 
 ## Current Phase
 
-- **WaterWatch v0.2.0 (development):** full-stack foundation built and pushed to
-  `Team-Compass-2026/waterwatch`. Backend runs on the **career-gps stack**
-  (Prisma 7 + `@prisma/adapter-pg` + Neon Postgres + Better Auth + Zod 4), all
-  pages are wired to the query/API layer (with sample-data fallback), and a
-  shared **design system** (4-level risk, fonts, tokens, live preview) is
-  documented for both delivery paths. Theme classified for DEEP 2026: **Health
-  and Wellbeing** (primary) + **Community Resilience and Sustainability**
-  (secondary) → `waterwatch/docs/scope.md`.
+- **WaterWatch v0.3 (development):** `civic-alert-system/` is now the **main
+  app and single delivery path** (decision made Aug 21, 2026). TanStack Start +
+  React 19 + Tailwind v4 + Supabase; deployed at
+  https://civic-alert-system-theta.vercel.app/. The Next.js + Neon prototype
+  (`waterwatch-nextjs/`) is archived as reference only.
+- Theme classified for DEEP 2026: **Health and Wellbeing** (primary) +
+  **Community Resilience and Sustainability** (secondary).
 
 ## Current Goal
 
-- Provision the Neon project + `DATABASE_URL` / `BETTER_AUTH_SECRET` /
-  `BETTER_AUTH_URL`, run `prisma migrate deploy` + seed, and take the main app
-  off sample data
-- Build the Lovable design-system library per `waterwatch/docs/lovable/design-system-build.md`
-- Complete the citizen verify flow (Confirm/Dispute) against
-  `/api/reports/[id]/verify`
+- Fix admin/org dashboard access (demo sign-in returns Supabase Auth 500 —
+  "Database error querying schema" — under investigation)
+- Verify Vercel redeploy picked up the latest report-submit fixes
+- Clean up orphan test row in `reports` table (id `9dbc6079-7de5-4e1b-a064-adb503ed7165`)
 
 ## Completed (WaterWatch brand identity sync)
 
@@ -125,18 +122,31 @@ The `.env` file (SUPABASE_* / VITE_SUPABASE_*) is untracked by design.
 ## Architecture Decisions
 
 - Community-powered WASH early warning · Team Compass 2026
-- **Main app:** Prisma 7 + `@prisma/adapter-pg` + Neon Postgres + Better Auth +
-  Zod 4 (career-gps stack, mirrored) — pages fall back to sample data until DB
-  is configured
-- **Lovable prototype:** civic-alert-system repo (TanStack Start + Supabase);
-  see `civic-alert-system/project.yaml` for stack details
+- **Main app (single delivery path):** `civic-alert-system/` — TanStack Start +
+  React 19 + Tailwind v4 + Supabase (Auth, Postgres + RLS, Storage); server
+  functions in `src/lib/*.functions.ts`; deployed on Vercel via Nitro adapter
+- **Archived:** `waterwatch-nextjs/` (Next.js 16 + Prisma 7 + Neon + Better
+  Auth + Hono) — reference for design/data-model only
 - Maps: React Leaflet 5 + OpenStreetMap (no Mapbox key needed)
 - Deterministic, explainable 4-level risk engine (no LLM in the core math)
-- Design system shared across both stacks: 4-level risk, Space Grotesk + DM
-  Sans + Geist Mono, clean & airy, "reports are signals, not diagnoses"
+- Design system: 4-level risk, Space Grotesk + DM Sans + Geist Mono, clean &
+  airy, "reports are signals, not diagnoses"
 - Anonymous reporting always possible; `/profile` auth-aware
 
 ## Session Notes
+
+- **Aug 21, 2026 — delivery-path pivot:** org context updated —
+  `civic-alert-system/` is now the main app; `waterwatch-nextjs/` archived as
+  reference (AGENTS.md, architecture.md, this tracker).
+- **Report submit fixed & verified:** success card now replaces the form +
+  smooth-scrolls to top; map runs in pick mode on /report (area popups
+  suppressed so any tap pins a location); requirements checklist above Submit.
+  Insert path verified twice via Supabase REST (`status: open`). Commits up to
+  `b9a28a3` pushed to civic-alert-system main.
+- Demo sign-in broken: password grant for seeded demo accounts returns 500
+  "Database error querying schema" while fresh signups work — points at the
+  hand-seeded auth.users/auth.identities rows, not GoTrue itself. Probe user
+  created during testing: probe-delete-me@waterwatch.dev (delete later).
 
 - Seeder rewritten (`supabase/seed-full.sql`): fully idempotent (NOT EXISTS
   guards on every report/alert insert) and now creates one demo account per
